@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 10:02:55 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 11:26:29 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/24 14:58:28 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	screen(t_global *global)
 	int		i;
 	t_bmp	*header;
 
-	if (!(header = malloc(sizeof(header))))
+	if (!(header = ft_calloc(1, sizeof(*header))))
 		exit_free(global, -1);
 	i = global->size_y;
 	fd = open("cub3d.bmp", O_WRONLY | O_TRUNC | O_CREAT, 0777);

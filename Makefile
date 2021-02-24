@@ -6,7 +6,7 @@
 #    By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/22 19:08:47 by sfournio          #+#    #+#              #
-#    Updated: 2021/02/24 13:58:51 by sfournio         ###   ########lyon.fr    #
+#    Updated: 2021/02/24 14:59:18 by sfournio         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ CC = gcc
 
 RM = rm -f
 
-FLAGS = #-Wall -Wextra -Werror# -fsanitize=address -g3 
+FLAGS = -Wall -Wextra -Werror -fsanitize=address -g3 
 
 %.o:	%.c ${HEADERF}/${HEADER}
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I${HEADERF} -g
