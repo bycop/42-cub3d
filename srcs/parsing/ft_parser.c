@@ -51,7 +51,7 @@ int		ft_parser2(t_global *global, char *str, int ret)
 {
 	ret = global->lol->clamap;
 	if (str[0] == 'R' && str[1] == ' ' && !ret && !global->lol->dr)
-		ret = case_r(str, global);
+		ret = case_r(str, global, 1, 0);
 	else if (str[0] == 'N' && str[1] == 'O' && str[2] == ' ' && !ret)
 		ret = case_no(str, global);
 	else if (str[0] == 'S' && str[1] == 'O' && str[2] == ' ' && !ret)

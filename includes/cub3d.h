@@ -163,6 +163,7 @@ typedef struct	s_global
 	int			map_y;
 	int			map_x;
 	int			nbsprites;
+	int			intmax;
 	t_window	*wind;
 	t_texture	*lol;
 	t_sprites	*sprites;
@@ -228,7 +229,7 @@ int				case_so(char *str, t_global *global);
 int				case_ea(char *str, t_global *global);
 int				case_we(char *str, t_global *global);
 int				case_s(char *str, t_global *global);
-int				case_r(char *str, t_global *global);
+int				case_r(char *str, t_global *global, int i, long res);
 int				case_f(char *str, t_global *global, int j, int res);
 int				case_c(char *str, t_global *global, int j, int res);
 int				case_map(char *str, t_global *global);

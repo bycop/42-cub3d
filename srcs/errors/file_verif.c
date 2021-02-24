@@ -106,6 +106,8 @@ int		struct_verif(t_global *global)
 		global->size_x = 64;
 	if (global->size_y < 64)
 		global->size_y = 64;
+	if (global->intmax == 1)
+		return (error_log(8));
 	res_verif(global, 0, 0);
 	i = 0;
 	if ((global->lol->f[0] == -1 && global->lol->f[1] == -1

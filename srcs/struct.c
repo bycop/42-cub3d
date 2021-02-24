@@ -31,6 +31,7 @@ void	ft_init2(t_global *global)
 	global->lol->so = NULL;
 	global->lol->no = NULL;
 	global->lol->s = NULL;
+	global->intmax = 0;
 }
 
 void	ft_init(void *mlx, t_global *global)

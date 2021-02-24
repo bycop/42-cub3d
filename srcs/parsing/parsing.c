@@ -36,20 +36,17 @@ int		verif_r(char *str)
 	return (0);
 }
 
-int		case_r(char *str, t_global *global)
+int		case_r(char *str, t_global *global, int i, long res)
 {
-	int	i;
-	int	res;
-
 	global->lol->dr = 1;
-	i = 1;
-	res = 0;
 	skip_spaces(str, &i, 2);
 	if (verif_r(str) == -1)
 		return (-1);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10 + (str[i] - '0');
+		if (res > 2147483647)
+			global->intmax = 1;
 		i++;
 	}
 	global->size_x = res;
@@ -58,6 +55,8 @@ int		case_r(char *str, t_global *global)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10 + (str[i] - '0');
+		if (res > 2147483647)
+			global->intmax = 1;
 		i++;
 	}
 	global->size_y = res;
