@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 10:46:45 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 13:54:06 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/25 13:36:55 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,9 @@ void	res_verif(t_global *global, int savem, int savep)
 	while ((global->size_x - savem) % 64 != 0)
 		savem++;
 	savem = global->size_x - savem;
-	while ((global->size_x - savep) % 64 != 0)
+	while ((global->size_x + savep) % 64 != 0)
 		savep++;
-	savep = global->size_x - savep;
+	savep = global->size_x + savep;
 	if (savep - global->size_x > global->size_x - savem)
 		global->size_x = savem;
 	else
@@ -85,9 +85,9 @@ void	res_verif(t_global *global, int savem, int savep)
 	while ((global->size_y - savem) % 64 != 0)
 		savem++;
 	savem = global->size_y - savem;
-	while ((global->size_y - savep) % 64 != 0)
+	while ((global->size_y + savep) % 64 != 0)
 		savep++;
-	savep = global->size_y - savep;
+	savep = global->size_y + savep;
 	if (savep - global->size_y > global->size_y - savem)
 		global->size_y = savem;
 	else
@@ -102,10 +102,10 @@ int		struct_verif(t_global *global)
 		global->size_x = global->max_x;
 	if (global->size_y > global->max_y)
 		global->size_y = global->max_y;
-	if (global->size_x < 64)
-		global->size_x = 64;
-	if (global->size_y < 64)
-		global->size_y = 64;
+	if (global->size_x < 128)
+		global->size_x = 128;
+	if (global->size_y < 128)
+		global->size_y = 128;
 	if (global->intmax == 1)
 		return (error_log(8));
 	res_verif(global, 0, 0);
