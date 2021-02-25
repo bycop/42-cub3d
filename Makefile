@@ -6,7 +6,7 @@
 #    By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/22 19:08:47 by sfournio          #+#    #+#              #
-#    Updated: 2021/02/25 10:03:17 by sfournio         ###   ########lyon.fr    #
+#    Updated: 2021/02/25 10:06:08 by sfournio         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,8 +57,8 @@ fclean:		clean
 			${RM} ${NAME}
 			make -C libft fclean
 			make -C minilibx_mms_20200219 clean
-			test -f myApp && rm libmlx.dylib
-			test -f myApp && rm libft.a
+			if [ -a libmlx.dylib ]; then rm libmlx.dylib; fi;
+			if [ -a libft.a ]; then rm libft.a; fi;
 
 re: fclean all
 
