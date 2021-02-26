@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 13:07:31 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 13:07:56 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 15:29:34 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	tex_drawer(t_global *global, t_tmptex *tmp, int t, int y)
 								global->lol->c[1] * 16 * 16 + global->lol->c[2];
 		t += global->size_x;
 	}
-	while (y++ < tmp->drawend)
+	while (y++ <= tmp->drawend)
 	{
 		texy = (int)tmp->texpos & (global->img[tmp->texnum].h - 1);
 		tmp->texpos += tmp->step;
@@ -59,7 +59,7 @@ void	tex_drawer(t_global *global, t_tmptex *tmp, int t, int y)
 		global->wind->addr[t] = color;
 		t += global->size_x;
 	}
-	while (y++ < global->size_y)
+	while (y++ <= global->size_y)
 	{
 		global->wind->addr[t] = global->lol->f[0] * 16 * 16 * 16 * 16 +
 								global->lol->f[1] * 16 * 16 + global->lol->f[2];

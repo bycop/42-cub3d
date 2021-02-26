@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 16:31:08 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 14:06:22 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 15:37:34 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,6 +188,7 @@ void			sprite_calc(t_global *global, t_tmptex *tmp, int *spriteorder,
 				int i);
 void			sprite_drawer(t_global *global, t_tmptex *tmp, double *zbuffer,
 				int s);
+void			hud_draw(t_global *global);
 
 /*
 **	Keypress + Hooks

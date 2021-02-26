@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 13:19:43 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 13:26:53 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/26 15:36:53 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ int		gameloop(t_global *global)
 	mlx_clear_window(global->wind->mlx, global->wind->win);
 	mlx_put_image_to_window(global->wind->mlx, global->wind->win,
 		global->wind->img, 0, 0);
+	hud_draw(global);
 	mlx_destroy_image(global->wind->mlx, global->wind->img);
 	return (0);
 }
