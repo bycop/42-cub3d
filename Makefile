@@ -6,7 +6,7 @@
 #    By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/22 19:08:47 by sfournio          #+#    #+#              #
-#    Updated: 2021/02/25 10:06:08 by sfournio         ###   ########lyon.fr    #
+#    Updated: 2021/02/26 14:34:42 by sfournio         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ HEADERF = includes
 
 HEADER = cub3d.h
 
-NAME = cub3d
+NAME = cub3D
 
 CC = gcc
 
