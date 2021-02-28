@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 16:31:36 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/28 11:56:56 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/28 13:33:02 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@ void	exit_free(t_global *global, int i)
 	while (++i <= global->map_y)
 		free(global->map[i]);
 	free(global->map);
+	free(global->img);
 	free(global->sprites);
 	free(global);
 	exit(EXIT_SUCCESS);
-	while (1)
-		;
 }
 
 int		error_log(int type)
