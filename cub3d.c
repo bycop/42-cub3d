@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 16:31:36 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 14:27:28 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/28 11:56:56 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		main(int argc, char **argv)
 	global->lol = &texture;
 	ft_init(mlx, global);
 	if ((fd = args_verif(global, argv, argc)) < 0)
-		(exit_free(global, -1));
+		exit_free(global, -1);
 	if (ft_parser(fd, global, 0) == -1 || struct_verif(global) == -1)
 		exit_free(global, -1);
 	sprites_found(global);

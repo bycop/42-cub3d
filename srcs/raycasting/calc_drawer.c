@@ -6,11 +6,15 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 13:07:31 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/26 15:29:34 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/28 12:05:18 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
+/*
+**		Step + Distance avec le mur
+*/
 
 void	found_step(t_global *global, t_tmptex *tmp)
 {
@@ -39,6 +43,10 @@ void	found_step(t_global *global, t_tmptex *tmp)
 	}
 }
 
+/*
+**		Draw texture vertical line
+*/
+
 void	tex_drawer(t_global *global, t_tmptex *tmp, int t, int y)
 {
 	unsigned int	color;
@@ -66,6 +74,10 @@ void	tex_drawer(t_global *global, t_tmptex *tmp, int t, int y)
 		t += global->size_x;
 	}
 }
+
+/*
+**		Init texture structure + detection mur / side
+*/
 
 void	tex_calc(t_global *global, t_tmptex *tmp)
 {
@@ -96,6 +108,10 @@ void	tex_calc(t_global *global, t_tmptex *tmp)
 	}
 }
 
+/*
+**		Draw sprite vertical line
+*/
+
 void	sprite_drawer(t_global *global, t_tmptex *tmp, double *zbuffer, int s)
 {
 	int				texx;
@@ -124,6 +140,11 @@ void	sprite_drawer(t_global *global, t_tmptex *tmp, double *zbuffer, int s)
 		}
 	}
 }
+
+/*
+**		Calcul des distances avec les sprites, des tailles ainsi que des
+**		intervales de draw (start / end)
+*/
 
 void	sprite_calc(t_global *global, t_tmptex *tmp, int *spriteorder, int i)
 {

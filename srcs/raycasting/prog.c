@@ -6,11 +6,15 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 13:19:43 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/26 15:36:53 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/02/28 12:09:37 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
+/*
+**		Calcul des intervales de draw + textures pour chaque coté
+*/
 
 void	tex_main(t_global *global, t_tmptex *tmp)
 {
@@ -41,6 +45,10 @@ void	tex_main(t_global *global, t_tmptex *tmp)
 		tmp->texx = global->img[tmp->texnum].w - tmp->texx - 1;
 }
 
+/*
+**		Fonction principale du Raycasting, appel des fonctions + boucles
+*/
+
 void	prog(t_global *global)
 {
 	t_tmptex	tmp;
@@ -69,6 +77,10 @@ void	prog(t_global *global)
 	}
 	free(spriteorder);
 }
+
+/*
+**		Fonction appelée jusqu'à la fin du programme par loop_hook.
+*/
 
 int		gameloop(t_global *global)
 {
@@ -99,6 +111,10 @@ int		gameloop(t_global *global)
 	return (0);
 }
 
+/*
+**		Creation des structures de chaque textures
+*/
+
 void	img_gen(t_global *global, int i)
 {
 	if (!(global->img = malloc(sizeof(t_xpm) * 5)))
@@ -118,6 +134,10 @@ void	img_gen(t_global *global, int i)
 			&global->img[i].bytes, &global->img[i].sizeline,
 				&global->img[i].endian);
 }
+
+/*
+**	Initialisation de mlx et de la fenetre + hooks
+*/
 
 void	open_window(t_global *global)
 {
