@@ -6,7 +6,7 @@
 /*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/03 16:31:50 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 11:13:18 by sfournio         ###   ########lyon.fr   */
+/*   Updated: 2021/03/01 13:54:53 by sfournio         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_init2(t_global *global)
 	global->lol->so = NULL;
 	global->lol->no = NULL;
 	global->lol->s = NULL;
+	global->img = NULL;
 	global->intmax = 0;
 }
 
