@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_verif_errors.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: bycop <bycop@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/14 11:13:29 by sfournio          #+#    #+#             */
-/*   Updated: 2021/02/24 13:59:26 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2021/01/14 11:13:29 by bycop          #+#    #+#             */
+/*   Updated: 2021/02/24 13:59:26 by bycop         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

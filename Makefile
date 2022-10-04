@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+         #
+#    By: bycop <bycop@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/12/22 19:08:47 by sfournio          #+#    #+#              #
-#    Updated: 2021/02/26 15:53:07 by sfournio         ###   ########lyon.fr    #
+#    Created: 2020/12/22 19:08:47 by bycop          #+#    #+#              #
+#    Updated: 2021/02/26 15:53:07 by bycop         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
